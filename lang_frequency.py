@@ -8,7 +8,8 @@ def load_data(filepath):
 
 
 def get_most_frequent_words(text):
-    word_freqs = Counter(text.split()).most_common(10)
+    words_count = 10
+    word_freqs = Counter(text.split()).most_common(words_count)
     if word_freqs:
         return word_freqs
     else:
