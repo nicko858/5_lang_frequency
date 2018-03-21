@@ -15,6 +15,7 @@ The program uses these libs from Python Standart Library:
 ```python
 import sys
 from collections import Counter
+import re
 
 ```
 
