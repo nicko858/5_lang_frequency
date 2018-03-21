@@ -1,5 +1,6 @@
 import sys
 from collections import Counter
+import re
 
 
 def load_data(filepath):
@@ -9,22 +10,15 @@ def load_data(filepath):
 
 def get_most_frequent_words(text):
     words_count = 10
-    word_freqs = Counter(text.split()).most_common(words_count)
-    if word_freqs:
-        return word_freqs
-    else:
-        return None
+    get_words = re.findall('\w+', text.lower())
+    return Counter(get_words).most_common(words_count)
 
 
 if __name__ == "__main__":
     script_usage = "lang_frequency.py  <path to file>"
     if len(sys.argv) != 2:
-        print("Incorrect line argument!""\n""Using: {}".format(script_usage))
-    else:
-        load_file = load_data(sys.argv[1])
-        word_list = get_most_frequent_words(load_file)
-        if word_list:
-            for word, count in word_list:
-                print (word, count)
-        else:
-            exit("The source file is empty!")
+        exit("Incorrect line argument!""\n""Using: {}".format(script_usage))
+    load_file = load_data(sys.argv[1])
+    ten_freq_words = get_most_frequent_words(load_file)
+    for word, count in ten_freq_words:
+        print(word, count)
