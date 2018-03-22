@@ -46,10 +46,11 @@ in the console  output you will see something  like this:
 ```
 
 The program check command-line arguments and if it is wrong,  you will see the warning message:
-```usage: lang_frequency.py [-h] source_text words_count
-lang_frequency.py: error: the following arguments are required: words_count.```
+```usage: lang_frequency.py [-h] source_text words_count```
+```lang_frequency.py: error: the following arguments are required: words_count.```
 
 
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+
