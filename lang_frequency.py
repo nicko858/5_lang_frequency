@@ -20,4 +20,4 @@ if __name__ == "__main__":
     file_to_load = load_data(sys.argv[1])
     freq_words = get_most_frequent_words(file_to_load, int(sys.argv[2]))
     for word, count in freq_words:
-        print(word, count)
+        print(word, count)        
