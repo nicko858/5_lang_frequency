@@ -13,14 +13,14 @@ Module ```lang_frequency.py``` contains the following functions:
 The program uses these libs from Python Standart Library:
 
 ```python
-import sys
 from collections import Counter
 import re
+import argparse
 
 ```
 
 How in works:
-- The program reads  the first command-line argument(path to text-file)
+- Using argparse, the program reads  the first command-line argument(path to text-file) and the second argument (words count need to display)
 - loads it using  ```load_data())``` -function
 - With ```get_most_frequent_words()``` -function, return most popular words in this file in descending order of frequency. 
 
@@ -46,10 +46,8 @@ in the console  output you will see something  like this:
 ```
 
 The program check command-line arguments and if it is wrong,  you will see the warning message:
-```Incorrect line argument!```
-and usage-message.
-
-In the case above, the program will not run.
+```usage: lang_frequency.py [-h] source_text words_count
+lang_frequency.py: error: the following arguments are required: words_count.```
 
 
 # Project Goals
