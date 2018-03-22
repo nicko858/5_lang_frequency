@@ -72,12 +72,13 @@ The program uses these libs from Python Standart Library:
 ```python
 import sys
 from collections import Counter
+import re
 
 ```
 
 How in works:
 - The program reads  the first command-line argument(path to text-file)
-- loads it using  ```json.loads()``` -function
+- loads it using  ```load_data())``` -function
 - With ```get_most_frequent_words()``` -function, return 10 most popular words in this file in descending order of frequency
 
 Example of script launch on Linux, Python 3.5:
@@ -105,12 +106,7 @@ The program check command-line arguments and if it is wrong,  you will see the w
 ```Incorrect line argument!```
 and usage-message.
 
-If the  source-file is empty,  you will see the following warning messages:
-
-```The source file is empty!```
-
-
-In the cases above, the program will not run.
+In the case above, the program will not run.
 
 
 # Project Goals
