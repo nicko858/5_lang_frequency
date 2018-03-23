@@ -13,7 +13,7 @@ def get_most_frequent_words(text, words_count):
     return Counter(only_words).most_common(words_count)
 
 
-def arg_parser_init(value):
+def arg_parser_init(arg_value):
     script_usage = "lang_frequency.py <path to file> <words_count>"
     parser = argparse.ArgumentParser(description="How to run lang_frequency.py:", usage=script_usage)
     parser.add_argument("source_text",
@@ -21,9 +21,9 @@ def arg_parser_init(value):
     parser.add_argument("words_count", type=int,
                         help="Specify the words count need to display")
     args = parser.parse_args()
-    if value == "source_text":
+    if arg_value == "source_text":
         return args.source_text
-    elif value == "words_count":
+    elif arg_value == "words_count":
         return args.words_count
 
 
