@@ -30,4 +30,4 @@ if __name__ == "__main__":
         exit("No such file or directory {}".format(arg_parser_init().source_text))
     most_freq_words = get_most_frequent_words(loaded_text, arg_parser_init().words_count)
     for word, count in most_freq_words:
-        print(word, count)
+        print (word, count)
