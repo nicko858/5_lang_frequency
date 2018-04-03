@@ -13,9 +13,9 @@ Module ```lang_frequency.py``` contains the following functions:
 The program uses these libs from Python Standart Library:
 
 ```python
-from collections import Counter
-import re
-import argparse
+Counter from collections 
+re
+argparse
 
 ```
 
