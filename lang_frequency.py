@@ -38,3 +38,4 @@ if __name__ == "__main__":
     most_freq_words = get_most_frequent_words(loaded_text, get_args().words_count)
     for word, count in most_freq_words:
         print(word, count)
+
